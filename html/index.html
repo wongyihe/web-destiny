@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <script>
+        $(document).ready(function () {
+            $('#add-thing-btn').click(function (evt) {
+                $("#items").append("<li>Appended item</li>");
+            })
+
+        });
+    </script>
+</head>
+
+<body>
+    <form id="add-thing">
+        <input id="thing-box" type="text" placeholder="Add something">
+        <button type="submit" id="add-thing-btn"></button>
+    </form>
+    <ol id="items">
+    </ol>
+
+</body>
+
+</html>

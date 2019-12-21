@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<script>
+    $(document).ready(function() {
+                var music = 0;
+               
+                var iconclicked = 1;
+
+                var snd1 = new Audio();
+                var src1 = document.createElement("source");
+                src1.type = "audio/mpeg";
+                src1.src = "audio/Riddim_Road.mp3";
+                snd1.appendChild(src1);
+
+                var snd2 = new Audio();
+                var src2 = document.createElement("source");
+                src2.type = "audio/mpeg";
+                src2.src = "audio/poyo.mp3";
+                snd2.appendChild(src2);
+
+                snd1.play();
+                snd2.play();
+
+
+
+
+
+             
+
+    }
+
+</script>
+<style>
+    body {
+        background-image: url("images/destiny-background.gif");
+        background-size: auto;
+    }
+    
+    .logo {
+        text-align: center;
+    }
+    
+    img {
+        max-width: 100%;
+        top: 50%;
+        left: 0;
+        right: 0;
+        width: 445px;
+        height: 263px;
+        margin-top: -50px;
+        position: relative;
+        -webkit-animation: mymove 3s;
+        -webkit-animation-fill-mode: forwards;
+        animation: mymove 3s;
+        animation-fill-mode: forwards;
+    }
+    
+    @-webkit-keyframes mymove {
+        from {
+            top: 0px;
+        }
+        to {
+            top: 200px;
+        }
+        /*        background-color: white*/
+    }
+    
+    @keyframes mymove {
+        from {
+            top: 0px;
+        }
+        to {
+            top: 200px;
+        }
+    }
+    
+    .wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    
+    .btn-wrapper {
+        cursor: pointer;
+    }
+    
+    button {
+        width: 200px;
+        height: 39px;
+        border: none;
+        background: 0 0;
+        cursor: pointer;
+        font-weight: 500;
+        position: fixed;
+        bottom: 30px;
+        left: 550px;
+    }
+    
+    #start {
+        background: url(images/destiny-button-01.png) no-repeat center center fixed;
+        background-size: cover;
+    }
+    
+    #start:hover {
+        opacity: 0.5;
+        right: 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    a {
+        transition: 0.25s;
+    }
+    
+    .container {
+        width: 50px;
+        position: fixed;
+        top: 8px;
+        right: 0px;
+    }
+    
+    .circle {
+        stroke: #f8aa28;
+        stroke-dasharray: 650;
+        stroke-dashoffset: 650;
+        -webkit-transition: all 0.5s ease-in-out;
+        opacity: 0.3;
+    }
+    
+    #iicon {
+        width: 45px;
+        position: fixed;
+        top: 8px;
+        right: 50px;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding-bottom: 6px;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        margin-top: -40px;
+        margin-left: -170px;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="images/destiny-logo.png">
+        </div>
+
+        <a href="destiny.html">
+            <button class="btn-wrapper" id="start" style="background:url(images/destiny-button-01.png);width:200px;height:39px;">
+             <span class="btn-action" ></span>
+        <span class="big-btn"></span>
+    </button>
+        </a>
+
+        <audio src="audio/Riddim_Road.mp3" controls autoplay style="visibility: hidden;" id="hiddenplay"></audio>
+        <div class='container'>
+            <i class="fa fa-play-circle fa-3x" id="play" aria-hidden="true"></i>
+            <i class="fa fa-play-circle-o" id="pause" aria-hidden="true" style="visibility: hidden;"></i>
+
+            <div class="tooltip">
+                <i class="fa fa-info-circle fa-3x" id="iicon" aria-hidden="true"></i>
+                <span class="tooltiptext">遊戲規則</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
